@@ -1,0 +1,1 @@
+﻿Get-ADComputer -Filter * -SearchBase "DC=ppedv,DC=local" | Foreach-Object {Invoke-GPUpdate -Computer $_.name -Force -RandomDelayInMinutes 0}
